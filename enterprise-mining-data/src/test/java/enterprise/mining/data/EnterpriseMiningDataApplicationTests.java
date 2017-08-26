@@ -1,4 +1,4 @@
-package com.yay;
+package enterprise.mining.data;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

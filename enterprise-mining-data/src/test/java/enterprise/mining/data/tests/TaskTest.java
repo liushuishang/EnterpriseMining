@@ -1,4 +1,4 @@
-package com.yay;
+package enterprise.mining.data.tests;
 
 import com.alibaba.fastjson.JSON;
 import enterprise.mining.data.EnterpriseMiningDataApplication;
