@@ -1,4 +1,4 @@
-package enterprise.mining.data.domain;
+package enterprise.mining.data.model;
 
 import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;

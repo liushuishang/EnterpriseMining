@@ -2,7 +2,7 @@ package enterprise.mining.data.tests;
 
 import com.alibaba.fastjson.JSON;
 import enterprise.mining.data.EnterpriseMiningDataApplication;
-import enterprise.mining.data.domain.Task;
+import enterprise.mining.data.model.Task;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

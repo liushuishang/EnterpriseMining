@@ -1,6 +1,6 @@
 package enterprise.mining.data.controller;
 
-import enterprise.mining.data.domain.Task;
+import enterprise.mining.data.model.Task;
 import enterprise.mining.data.repositories.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
