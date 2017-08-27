@@ -10,7 +10,7 @@ import org.neo4j.ogm.annotation.Index;
 public abstract class EntityNode {
     @GraphId
     private Long nodeId;
-    @Index(unique = true, primary = true)
+    @Index(unique = true)
     private String entityId;
     @Index
     private String name;

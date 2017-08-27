@@ -16,8 +16,11 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import static enterprise.mining.data.utils.EMapUtils.*;
 
 /**
  * Created by  yuananyun on 2017/8/26.
@@ -34,23 +37,21 @@ public class GraphBuildService {
     @Autowired
     private EnterpriseGraphService graphService;
 
-//    db.map_info.find({id:'2357744233'}).limit(1)
-//        db.base_info.find({}).skip(100).limit(10)
 
     @SuppressWarnings("all")
     @Transactional
-    public void createOneMap(String targetId) {
+    public void createOneMap(String _id, String targetId) {
         Map<String, Object> data = mongoTemplate.findOne(new Query(Criteria.where("id").is(String.valueOf(targetId))),
                 Map.class, MAP_COLLECTION_NAME);
         if (data == null || data.size() == 0) return;
 
         Company company = new Company();
         company.setEntityId(targetId);
+        graphService.fillCompanyBaseInfo(company,_id,null);
         company = graphService.saveCompanyNode(company);
 
         if (createNodes(data)) return;
         if (createRelationships(data)) return;
-
     }
 
     private boolean createNodes(Map<String, Object> data) {
@@ -66,6 +67,8 @@ public class GraphBuildService {
         List<Map<String, Object>> relationships = (List<Map<String, Object>>) MapUtils.getObject(data, "relationships");
         if (relationships == null || relationships.size() == 0) return true;
 
+        List<ERelationship> relationshipList = new ArrayList<>();
+
         for (Map<String, Object> param : relationships) {
             if (param == null || param.size() == 0) continue;
             String startId = getId(param, "startNode");
@@ -76,7 +79,7 @@ public class GraphBuildService {
             EntityNode endNode = graphService.getEntityNode(endId);
             if (startNode == null || endNode == null) continue;
 
-            String type = getMapString(param, "type");
+            String type = getString(param, "type");
             if (StringUtils.isBlank(type)) continue;
 
             ERelationship relationship = null;
@@ -102,8 +105,10 @@ public class GraphBuildService {
             }
             //保存关系
             if (relationship != null)
-                graphService.saveRelationship(relationship);
+                relationshipList.add(relationship);
         }
+        if (relationshipList.size() > 0)
+            graphService.saveRelationshipList(relationshipList);
         return false;
     }
 
@@ -115,9 +120,9 @@ public class GraphBuildService {
      */
     private void createNode(Map<String, Object> param) {
         if (param == null || param.size() == 0) return;
-        String id = getId(param, "id");
+        String entityId = getId(param, "id");
         //判断该节点是否存在，存在则跳过
-        if (graphService.isNodeExists(id)) return;
+        if (graphService.isNodeExists(entityId)) return;
 
         Map<String, Object> properties = getProperties(param);
         String name = MapUtils.getString(properties, "name");
@@ -126,10 +131,10 @@ public class GraphBuildService {
         String labels = MapUtils.getString(param, "labels", "");
 
         if (labels.contains("Company")) {
-            Company company = new Company(id, name, ntype, null);
+            Company company = new Company(entityId, name, ntype, null);
             graphService.saveCompanyNode(company);
         } else if (labels.contains("Human")) {
-            Person person = new Person(id, name, ntype);
+            Person person = new Person(entityId, name, ntype);
             graphService.savePersonNode(person);
         } else {
             logger.info("[createNode] 漏网之鱼：{}", JSON.toJSONString(param));
@@ -171,7 +176,7 @@ public class GraphBuildService {
                     getId(properties, "id"),
                     startNode, endNode,
                     getId(properties, "companyId"),
-                    getMapString(properties, "staffTypeName"),
+                    getString(properties, "staffTypeName"),
                     getId(properties, "staffId"));
         } catch (Exception ex) {
             logger.error(ex.getMessage(), ex);
@@ -194,8 +199,8 @@ public class GraphBuildService {
                     startNode, endNode,
                     getId(properties, "companyId"),
                     getId(properties, "investorId"),
-                    getMapString(properties, "investorType"),
-                    getMapString(properties, "capital"), getMapString(properties, "capitalActl"));
+                    getString(properties, "investorType"),
+                    getString(properties, "capital"), getString(properties, "capitalActl"));
         } catch (Exception ex) {
             logger.error(ex.getMessage(), ex);
             return null;
@@ -216,8 +221,8 @@ public class GraphBuildService {
                     startNode, endNode,
                     getId(properties, "companyId"),
                     getId(properties, "investorId"),
-                    getMapString(properties, "investorType"),
-                    getMapString(properties, "capital"), getMapString(properties, "capitalActl"));
+                    getString(properties, "investorType"),
+                    getString(properties, "capital"), getString(properties, "capitalActl"));
         } catch (Exception ex) {
             logger.error(ex.getMessage(), ex);
             return null;
@@ -242,36 +247,5 @@ public class GraphBuildService {
         }
     }
 
-
-    /**
-     * 获取实体对象Id
-     *
-     * @param param
-     * @return
-     */
-    private String getId(Map<String, Object> param, String field) {
-        return String.valueOf(MapUtils.getLongValue(param, field));
-    }
-
-    /**
-     * 获取属性Map
-     *
-     * @param param
-     * @return
-     */
-    private Map<String, Object> getProperties(Map<String, Object> param) {
-        return (Map<String, Object>) MapUtils.getMap(param, "properties");
-    }
-
-    /**
-     * 获取map中的String字段值
-     *
-     * @param param
-     * @param filed
-     * @return
-     */
-    private String getMapString(Map<String, Object> param, String filed) {
-        return MapUtils.getString(param, filed, "").trim();
-    }
 
 }

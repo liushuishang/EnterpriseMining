@@ -36,9 +36,9 @@ public class GraphBuildServiceTest {
 
     @Test
     public void 测试创建一个关系图谱() {
-//        String targetId = "2327007317";//广东网金控股
-        String targetId = "4156520";//北京万科企业有限公司
-        buildService.createOneMap(targetId);
+        String entityId = "2327007317";//广东网金控股
+        String _id = "a3fa592121da049a1041031c5ebb922e";
+        buildService.createOneMap(_id,entityId);
     }
 
 
