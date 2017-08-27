@@ -4,10 +4,7 @@ import com.alibaba.fastjson.JSON;
 import enterprise.mining.data.model.node.Company;
 import enterprise.mining.data.model.node.EntityNode;
 import enterprise.mining.data.model.node.Person;
-import enterprise.mining.data.model.relationship.ERelationship;
-import enterprise.mining.data.model.relationship.InvestCRelationship;
-import enterprise.mining.data.model.relationship.OwnRelationship;
-import enterprise.mining.data.model.relationship.StaffRelationship;
+import enterprise.mining.data.model.relationship.*;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -19,10 +16,8 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by  yuananyun on 2017/8/26.
@@ -51,9 +46,11 @@ public class GraphBuildService {
 
         Company company = new Company();
         company.setEntityId(targetId);
+        company = graphService.saveCompanyNode(company);
+
         if (createNodes(data)) return;
-        if (createRelationships(data, company)) return;
-        graphService.saveCompanyNode(company);
+        if (createRelationships(data)) return;
+
     }
 
     private boolean createNodes(Map<String, Object> data) {
@@ -65,13 +62,9 @@ public class GraphBuildService {
         return false;
     }
 
-    private boolean createRelationships(Map<String, Object> data, Company company) {
+    private boolean createRelationships(Map<String, Object> data) {
         List<Map<String, Object>> relationships = (List<Map<String, Object>>) MapUtils.getObject(data, "relationships");
         if (relationships == null || relationships.size() == 0) return true;
-
-        Set<ERelationship> investorRelationshipList = new HashSet<>();
-        Set<ERelationship> investmentRelationshipList = new HashSet<>();
-        Set<ERelationship> staffRelationshipList = new HashSet<>();
 
         for (Map<String, Object> param : relationships) {
             if (param == null || param.size() == 0) continue;
@@ -91,30 +84,29 @@ public class GraphBuildService {
             switch (type) {
                 case "OWN":
                     relationship = createOwnRelationship(startNode, endNode, properties);
-                    company.setOwnRelationship(relationship);
+                    break;
+                case "INVEST_H":
+                    relationship = createStockholderRelationship(startNode, endNode, properties);
                     break;
                 case "INVEST_C":
-                case "INVEST_H":
-                    relationship = createInvestRelationship(startNode, endNode, properties);
-                    investorRelationshipList.add(relationship);
+                    relationship = createInvestmentRelationship(startNode, endNode, properties);
                     break;
                 case "SERVE":
                     relationship = createStaffRelationship(startNode, endNode, properties);
-                    staffRelationshipList.add(relationship);
                     break;
                 case "BRANCH":
+                    relationship = createBranchRelationship(startNode, endNode, properties);
                     break;
                 default:
                     logger.info("[createRelationships] 未知的关系类型{}", type);
             }
             //保存关系
-            graphService.saveRelationship(relationship);
+            if (relationship != null)
+                graphService.saveRelationship(relationship);
         }
-        company.setInvestorRelationshipList(investorRelationshipList);
-        company.setInvestmentRelationshipList(investmentRelationshipList);
-        company.setStaffRelationshipList(staffRelationshipList);
         return false;
     }
+
 
     /**
      * 创建关系节点
@@ -146,6 +138,26 @@ public class GraphBuildService {
 
 
     /**
+     * 创建分支机构关系
+     *
+     * @param startNode
+     * @param endNode
+     * @param properties
+     * @return
+     */
+    private ERelationship createBranchRelationship(EntityNode startNode, EntityNode endNode, Map<String, Object> properties) {
+        try {
+            return new BranchRelationship(
+                    getId(properties, "id"),
+                    startNode, endNode
+            );
+        } catch (Exception ex) {
+            logger.error(ex.getMessage(), ex);
+            return null;
+        }
+    }
+
+    /**
      * 创建任职关系
      *
      * @param startNode
@@ -158,9 +170,32 @@ public class GraphBuildService {
             return new StaffRelationship(
                     getId(properties, "id"),
                     startNode, endNode,
-                    getMapString(properties, "companyId"),
+                    getId(properties, "companyId"),
                     getMapString(properties, "staffTypeName"),
                     getId(properties, "staffId"));
+        } catch (Exception ex) {
+            logger.error(ex.getMessage(), ex);
+            return null;
+        }
+    }
+
+    /**
+     * 创建对外投资关系
+     *
+     * @param startNode
+     * @param endNode
+     * @param properties
+     * @return
+     */
+    private ERelationship createInvestmentRelationship(EntityNode startNode, EntityNode endNode, Map<String, Object> properties) {
+        try {
+            return new InvestmentRelationship(
+                    getId(properties, "id"),
+                    startNode, endNode,
+                    getId(properties, "companyId"),
+                    getId(properties, "investorId"),
+                    getMapString(properties, "investorType"),
+                    getMapString(properties, "capital"), getMapString(properties, "capitalActl"));
         } catch (Exception ex) {
             logger.error(ex.getMessage(), ex);
             return null;
@@ -174,12 +209,12 @@ public class GraphBuildService {
      * @param endNode
      * @param properties
      */
-    private ERelationship createInvestRelationship(EntityNode startNode, EntityNode endNode, Map<String, Object> properties) {
+    private ERelationship createStockholderRelationship(EntityNode startNode, EntityNode endNode, Map<String, Object> properties) {
         try {
-            return new InvestCRelationship(
+            return new StockholderRelationship(
                     getId(properties, "id"),
                     startNode, endNode,
-                    getMapString(properties, "companyId"),
+                    getId(properties, "companyId"),
                     getId(properties, "investorId"),
                     getMapString(properties, "investorType"),
                     getMapString(properties, "capital"), getMapString(properties, "capitalActl"));

@@ -39,11 +39,13 @@ public class Company extends EntityNode {
     @Relationship(type = "法人",direction = Relationship.INCOMING)
     private ERelationship ownRelationship;
     @Relationship(type="股东",direction = Relationship.INCOMING)
-    private Set<ERelationship> investorRelationshipList;
-    @Relationship(type="对外投资",direction = Relationship.INCOMING)
-    private Set<ERelationship> investmentRelationshipList;
+    private Set<ERelationship> investorRelationshipSet;
+    @Relationship(type="对外投资",direction = Relationship.OUTGOING)
+    private Set<ERelationship> investmentRelationshipSet;
     @Relationship(type="任职",direction = Relationship.INCOMING)
-    private Set<ERelationship> staffRelationshipList;
+    private Set<ERelationship> staffRelationshipSet;
+    @Relationship(type="分支机构",direction = Relationship.OUTGOING)
+    private Set<ERelationship> BranchRelationshipSet;
 
 
     public Company() {
@@ -70,27 +72,35 @@ public class Company extends EntityNode {
         this.ownRelationship = ownRelationship;
     }
 
-    public Set<ERelationship> getInvestorRelationshipList() {
-        return investorRelationshipList;
+    public Set<ERelationship> getInvestorRelationshipSet() {
+        return investorRelationshipSet;
     }
 
-    public void setInvestorRelationshipList(Set<ERelationship> investorRelationshipList) {
-        this.investorRelationshipList = investorRelationshipList;
+    public void setInvestorRelationshipSet(Set<ERelationship> investorRelationshipSet) {
+        this.investorRelationshipSet = investorRelationshipSet;
     }
 
-    public Set<ERelationship> getInvestmentRelationshipList() {
-        return investmentRelationshipList;
+    public Set<ERelationship> getInvestmentRelationshipSet() {
+        return investmentRelationshipSet;
     }
 
-    public void setInvestmentRelationshipList(Set<ERelationship> investmentRelationshipList) {
-        this.investmentRelationshipList = investmentRelationshipList;
+    public void setInvestmentRelationshipSet(Set<ERelationship> investmentRelationshipSet) {
+        this.investmentRelationshipSet = investmentRelationshipSet;
     }
 
-    public Set<ERelationship> getStaffRelationshipList() {
-        return staffRelationshipList;
+    public Set<ERelationship> getStaffRelationshipSet() {
+        return staffRelationshipSet;
     }
 
-    public void setStaffRelationshipList(Set<ERelationship> staffRelationshipList) {
-        this.staffRelationshipList = staffRelationshipList;
+    public void setStaffRelationshipSet(Set<ERelationship> staffRelationshipSet) {
+        this.staffRelationshipSet = staffRelationshipSet;
+    }
+
+    public Set<ERelationship> getBranchRelationshipSet() {
+        return BranchRelationshipSet;
+    }
+
+    public void setBranchRelationshipSet(Set<ERelationship> branchRelationshipSet) {
+        BranchRelationshipSet = branchRelationshipSet;
     }
 }

@@ -7,7 +7,7 @@ import org.neo4j.ogm.annotation.RelationshipEntity;
  * Created by  yuananyun on 2017/8/26.
  */
 @RelationshipEntity(type ="股东")
-public class InvestCRelationship extends ERelationship {
+public class StockholderRelationship extends ERelationship {
     private String companyId;
     private String investorId;
     private String investorType;
@@ -15,11 +15,11 @@ public class InvestCRelationship extends ERelationship {
     //实际支付
     private String capitalActl;
 
-    public InvestCRelationship() {
+    public StockholderRelationship() {
     }
 
-    public InvestCRelationship(String id, EntityNode startNode, EntityNode endNode,
-                               String companyId, String investorId, String investorType, String capital, String capitalActl) {
+    public StockholderRelationship(String id, EntityNode startNode, EntityNode endNode,
+                                   String companyId, String investorId, String investorType, String capital, String capitalActl) {
         super(id, startNode, endNode);
         this.companyId = companyId;
         this.investorId = investorId;

@@ -27,12 +27,11 @@ public class EnterpriseGraphService {
 
     /**
      * 保存公司节点
-     *
      * @param company
      */
-    public void saveCompanyNode(Company company) {
-        if (company == null) return;
-        companyRepository.save(company);
+    public Company saveCompanyNode(Company company) {
+        if (company == null) return company;
+        return companyRepository.save(company);
     }
 
     public void savePersonNode(Person person) {

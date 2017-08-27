@@ -2,34 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4696e73c-b480-4210-b819-0037706e6c36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/Company.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/EntityNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/OutInvestment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/Person.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/investor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ERelationship.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ERelationshipType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/InvestCRelationship.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/OwnRelationship.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/StaffRelationship.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/CompanyRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/ERelationshipRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/PersonRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/EnterpriseGraphService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/GraphBuildServiceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/MongodbTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/config/Neo4jConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/test/resources/application.properties" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/BranchRelationship.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/InvestmentRelationship.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enterprise-mining-data/pom.xml" afterPath="$PROJECT_DIR$/enterprise-mining-data/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/controller/TaskController.java" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/controller/TaskController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/TaskRepository.java" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/TaskRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/TaskTest.java" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/TaskTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/UserMovieTests.java" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/UserMovieTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/domain/Task.java" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/Task.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/Company.java" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/Company.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ERelationshipType.java" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ERelationshipType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/EnterpriseGraphService.java" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/EnterpriseGraphService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/GraphBuildServiceTest.java" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/GraphBuildServiceTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/InvestCRelationship.java" afterPath="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/StockholderRelationship.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,24 +26,38 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GraphBuildService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BranchRelationship.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/BranchRelationship.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GraphBuildService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="54" column="55" lean-forward="true" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+            <state relative-caret-position="-1075">
+              <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1503763636256" expanded="false" signature="1560:1584" ph="/all/" />
+                <marker date="1503813247881" expanded="false" signature="1296:1320" ph="/all/" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvestCRelationship.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/InvestCRelationship.java">
+      <file leaf-file-name="GraphBuildServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/GraphBuildServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            <state relative-caret-position="-97">
+              <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,35 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OwnRelationship.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/OwnRelationship.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StaffRelationship.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/StaffRelationship.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ERelationshipRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/ERelationshipRepository.java">
+      <file leaf-file-name="StockholderRelationship.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/StockholderRelationship.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="40" />
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ERelationship.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ERelationship.java">
+      <file leaf-file-name="InvestmentRelationship.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/InvestmentRelationship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="200">
+              <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,13 +89,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnterpriseGraphService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/EnterpriseGraphService.java">
+      <file leaf-file-name="Company.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/Company.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="774">
+              <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2544#2545#0" expanded="true" />
+                <element signature="e#2588#2589#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,30 +106,40 @@
       <file leaf-file-name="EntityGraphMapper.java" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-core/2.1.3/neo4j-ogm-core-2.1.3-sources.jar!/org/neo4j/ogm/context/EntityGraphMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="773" column="33" lean-forward="true" selection-start-line="773" selection-start-column="33" selection-end-line="773" selection-end-column="33" />
+            <state relative-caret-position="947">
+              <caret line="616" column="0" lean-forward="false" selection-start-line="616" selection-start-column="0" selection-end-line="616" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/PersonRepository.java">
+      <file leaf-file-name="CompileContext.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-api/2.1.3/neo4j-ogm-api-2.1.3.jar!/org/neo4j/ogm/compiler/CompileContext.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="65" />
+            <state relative-caret-position="100">
+              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CypherContext.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-compiler/2.1.3/neo4j-ogm-compiler-2.1.3-sources.jar!/org/neo4j/ogm/compiler/CypherContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2208#2209#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/CompanyRepository.java">
+      <file leaf-file-name="EnterpriseGraphService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/EnterpriseGraphService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="243">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,7 +166,11 @@
       <find>CREATE</find>
       <find>东莞市俊特信息科技有限公司</find>
       <find>未知</find>
+      <find>getMapString(properties, &quot;companyId&quot;)</find>
     </findStrings>
+    <replaceStrings>
+      <replace>getId(properties, &quot;companyId&quot;)</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -196,10 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/repositories/ViewingRepository.java" />
-        <option value="$PROJECT_DIR$/enterprise-mining-data/src/test/resources/application.properties" />
-        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/domain/Company.java" />
-        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/domain/Person.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/domain/OwnRelationship.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/domain/InvestCRelationship.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/domain/RelatoinshipType.java" />
@@ -230,23 +213,27 @@
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/Person.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/pom.xml" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/investor.java" />
-        <option value="$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/GraphBuildServiceTest.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/BaseNode.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ＥRelationship.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/Relationship.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/RelatoinshipType.java" />
-        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ERelationshipType.java" />
-        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/Company.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ERelationship.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/EntityNode.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/CompanyRepository.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/PersonRepository.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/ERelationshipRepository.java" />
-        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/EnterpriseGraphService.java" />
-        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java" />
-        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/InvestCRelationship.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/OwnRelationship.java" />
         <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/StaffRelationship.java" />
+        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ERelationshipType.java" />
+        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/BranchRelationship.java" />
+        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/EnterpriseGraphService.java" />
+        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/Company.java" />
+        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/InvestCRelationship.java" />
+        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/InvestRelationship.java" />
+        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/StockholderRelationship.java" />
+        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/InvestmentRelationship.java" />
+        <option value="$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java" />
+        <option value="$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/GraphBuildServiceTest.java" />
       </list>
     </option>
   </component>
@@ -1590,7 +1577,7 @@
       <workItem from="1501333238480" duration="248000" />
       <workItem from="1502606215343" duration="12922000" />
       <workItem from="1502964389175" duration="16000" />
-      <workItem from="1503714015938" duration="31100000" />
+      <workItem from="1503714015938" duration="40964000" />
     </task>
     <task id="LOCAL-00001" summary="添加第一个测试">
       <created>1501405049189</created>
@@ -1606,43 +1593,50 @@
       <option name="project" value="LOCAL" />
       <updated>1503716222664</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="初步完成生成图谱">
+      <created>1503764050357</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1503764050357</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.26 at 23h 35m 30s.xml">
+    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 13h 24m 19s.xml">
       <configuration name="GraphBuildServiceTest.测试创建一个关系图谱" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.26 at 23h 38m 10s.xml">
+    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 13h 26m 11s.xml">
       <configuration name="GraphBuildServiceTest.测试创建一个关系图谱" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.26 at 23h 40m 41s.xml">
+    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 13h 29m 18s.xml">
       <configuration name="GraphBuildServiceTest.测试创建一个关系图谱" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.26 at 23h 46m 05s.xml">
+    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 13h 30m 34s.xml">
       <configuration name="GraphBuildServiceTest.测试创建一个关系图谱" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.26 at 23h 47m 42s.xml">
+    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 13h 48m 40s.xml">
       <configuration name="GraphBuildServiceTest.测试创建一个关系图谱" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.26 at 23h 52m 47s.xml">
+    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 13h 50m 16s.xml">
       <configuration name="GraphBuildServiceTest.测试创建一个关系图谱" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.26 at 23h 55m 45s.xml">
+    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 13h 51m 09s.xml">
       <configuration name="GraphBuildServiceTest.测试创建一个关系图谱" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 00h 00m 32s.xml">
+    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 13h 54m 05s.xml">
       <configuration name="GraphBuildServiceTest.测试创建一个关系图谱" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 00h 05m 02s.xml">
+    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 13h 54m 37s.xml">
       <configuration name="GraphBuildServiceTest.测试创建一个关系图谱" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 00h 08m 16s.xml">
+    <history-entry file="GraphBuildServiceTest_测试创建一个关系图谱 - 2017.08.27 at 13h 59m 41s.xml">
       <configuration name="GraphBuildServiceTest.测试创建一个关系图谱" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45309000" />
+    <option name="totallyTimeSpent" value="55173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1298" height="784" extended-state="6" />
@@ -1658,7 +1652,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57945424" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39486358" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1666,14 +1660,14 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8796148" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.68218297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32263243" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2819063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27059773" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58266455" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1757,7 +1751,8 @@
     </ignored-roots>
     <MESSAGE value="添加第一个测试" />
     <MESSAGE value="添加Neo4j测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加Neo4j测试" />
+    <MESSAGE value="初步完成生成图谱" />
+    <option name="LAST_COMMIT_MESSAGE" value="初步完成生成图谱" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1774,34 +1769,17 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java</url>
-          <line>54</line>
+          <condition expression="srcNodeBuilder==null||tgtNodeBuilder==null||relNodes==null" language="JAVA" mode="CODE_FRAGMENT" />
+          <url>jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-core/2.1.3/neo4j-ogm-core-2.1.3-sources.jar!/org/neo4j/ogm/context/EntityGraphMapper.java</url>
+          <line>759</line>
           <properties />
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java</url>
-          <line>55</line>
-          <properties />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java</url>
-          <line>142</line>
-          <properties />
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java</url>
-          <line>114</line>
-          <properties />
-          <option name="timeStamp" value="35" />
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="38" />
+      <option name="time" value="64" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1810,46 +1788,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-api/2.1.3/neo4j-ogm-api-2.1.3.jar!/org/neo4j/ogm/annotation/NodeEntity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.10.RELEASE/spring-test-4.3.10.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunAfterTestMethodCallbacks.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/config/Neo4jConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/TaskRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1936,14 +1874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.6.RELEASE/spring-data-commons-1.13.6.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -2079,37 +2009,27 @@
         <state relative-caret-position="189">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#854#855#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-            <element signature="e#972#973#0" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1248#1249#0" expanded="true" />
-            <element signature="e#1280#1281#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/GraphBuildServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#637#638#0" expanded="false" />
+            <element signature="e#662#663#0" expanded="false" />
+            <element signature="e#696#697#0" expanded="false" />
+            <element signature="e#724#725#0" expanded="false" />
+            <element signature="e#755#756#0" expanded="false" />
+            <element signature="e#782#783#0" expanded="false" />
+            <element signature="e#822#823#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#890#891#0" expanded="false" />
+            <element signature="e#922#923#0" expanded="false" />
+            <element signature="e#972#973#0" expanded="false" />
+            <element signature="e#1014#1015#0" expanded="false" />
+            <element signature="e#1047#1048#0" expanded="false" />
+            <element signature="e#1076#1077#0" expanded="false" />
+            <element signature="e#1120#1121#0" expanded="false" />
+            <element signature="e#1156#1157#0" expanded="false" />
+            <element signature="e#1184#1185#0" expanded="false" />
+            <element signature="e#1211#1212#0" expanded="false" />
+            <element signature="e#1248#1249#0" expanded="false" />
+            <element signature="e#1280#1281#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2130,14 +2050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ERelationshipType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-api/2.1.3/neo4j-ogm-api-2.1.3.jar!/org/neo4j/ogm/annotation/Relationship.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -2146,33 +2058,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="51" column="11" lean-forward="false" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1409#1410#0" expanded="true" />
-            <element signature="e#1447#1448#0" expanded="true" />
-            <element signature="e#1516#1517#0" expanded="true" />
-            <element signature="e#1570#1571#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
-            <element signature="e#1680#1681#0" expanded="true" />
-            <element signature="e#1909#1910#0" expanded="true" />
-            <element signature="e#1958#1959#0" expanded="true" />
-            <element signature="e#2190#2191#0" expanded="true" />
-            <element signature="e#2234#2235#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
           <folding>
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="false" />
+            <element signature="e#337#338#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2182,7 +2074,7 @@
         <state relative-caret-position="100">
           <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2197,14 +2089,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-core/2.1.3/neo4j-ogm-core-2.1.3-sources.jar!/org/neo4j/ogm/context/EntityGraphMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="773" column="33" lean-forward="true" selection-start-line="773" selection-start-column="33" selection-end-line="773" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/repositories/PersonRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -2215,30 +2099,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/EnterpriseGraphService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ERelationship.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/InvestCRelationship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2275,13 +2139,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java">
+    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/ERelationshipType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="54" column="55" lean-forward="true" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+        <state relative-caret-position="180">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.6.RELEASE/spring-data-commons-1.13.6.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-compiler/2.1.3/neo4j-ogm-compiler-2.1.3.jar!/org/neo4j/ogm/compiler/CypherContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="48" column="41" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+          <folding>
+            <element signature="e#1630#1631#0" expanded="true" />
+            <element signature="e#1699#1700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-api/2.1.3/neo4j-ogm-api-2.1.3.jar!/org/neo4j/ogm/compiler/CompileContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-compiler/2.1.3/neo4j-ogm-compiler-2.1.3-sources.jar!/org/neo4j/ogm/compiler/CypherContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="e#2208#2209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/BranchRelationship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1503763636256" expanded="false" signature="1560:1584" ph="/all/" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/EnterpriseGraphService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/StockholderRelationship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/relationship/InvestmentRelationship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/service/GraphBuildService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1075">
+          <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1503813247881" expanded="false" signature="1296:1320" ph="/all/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/test/java/enterprise/mining/data/tests/GraphBuildServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-core/2.1.3/neo4j-ogm-core-2.1.3-sources.jar!/org/neo4j/ogm/context/EntityGraphMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="947">
+          <caret line="616" column="0" lean-forward="false" selection-start-line="616" selection-start-column="0" selection-end-line="616" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterprise-mining-data/src/main/java/enterprise/mining/data/model/node/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2544#2545#0" expanded="true" />
+            <element signature="e#2588#2589#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -6,7 +6,8 @@ package enterprise.mining.data.model.relationship;
 public enum ERelationshipType {
     OWN("OWN", "法人"),
     INVEST_C("INVEST_C","参股"),
-    STAFF("SERVE", "任职")
+    STAFF("SERVE", "任职"),
+    BRANCH("BRANCH","分支机构")
     ;
 
     private String type;
