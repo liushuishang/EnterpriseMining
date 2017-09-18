@@ -5,6 +5,7 @@ import enterprise.mining.data.model.node.Company;
 import enterprise.mining.data.model.node.EntityNode;
 import enterprise.mining.data.model.node.Person;
 import enterprise.mining.data.model.relationship.*;
+import enterprise.mining.data.utils.EMapUtils;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -30,12 +31,31 @@ public class GraphBuildService {
     private Logger logger = LoggerFactory.getLogger(GraphBuildService.class);
 
     private static final String MAP_COLLECTION_NAME = "map_info";
+    private static final String MAP_ID_COLLECTION_NAME = "map_ids";
+
 
     @Autowired
     private MongoTemplate mongoTemplate;
 
     @Autowired
     private EnterpriseGraphService graphService;
+
+    /**
+     * 全量构建
+     */
+    public void build() {
+        Map data = null;
+        do {
+            try {
+                data = mongoTemplate.findAndRemove(new Query(Criteria.where("_id").exists(true)), Map.class, MAP_ID_COLLECTION_NAME);
+                String _id = EMapUtils.getString(data, "_id");
+                createOneMap(_id, EMapUtils.getId(data, "entityId"));
+                mongoTemplate.remove(new Query(Criteria.where("_id").is(_id)),MAP_ID_COLLECTION_NAME);
+            } catch (Exception ex) {
+                logger.error(ex.getMessage(), ex);
+            }
+        } while (data != null);
+    }
 
 
     @SuppressWarnings("all")
@@ -45,27 +65,27 @@ public class GraphBuildService {
                 Map.class, MAP_COLLECTION_NAME);
         if (data == null || data.size() == 0) return;
 
+        List<Map<String, Object>> nodes = (List<Map<String, Object>>) MapUtils.getObject(data, "nodes");
+        if (nodes == null || nodes.size() <10) return;//小于个节点的关系不考虑
+
         Company company = new Company();
         company.setEntityId(targetId);
-        graphService.fillCompanyBaseInfo(company,_id,null);
-        company = graphService.saveCompanyNode(company);
+        graphService.fillCompanyBaseInfo(company, _id, null);
+        graphService.saveCompanyNode(company);
 
-        if (createNodes(data)) return;
-        if (createRelationships(data)) return;
+        createNodes(nodes);
+        createRelationships(data);
     }
 
-    private boolean createNodes(Map<String, Object> data) {
-        List<Map<String, Object>> nodes = (List<Map<String, Object>>) MapUtils.getObject(data, "nodes");
-        if (nodes == null || nodes.size() == 0) return true;
+    private void createNodes(List<Map<String, Object>> nodes) {
         for (Map<String, Object> node : nodes) {
             createNode(node);
         }
-        return false;
     }
 
-    private boolean createRelationships(Map<String, Object> data) {
+    private void createRelationships(Map<String, Object> data) {
         List<Map<String, Object>> relationships = (List<Map<String, Object>>) MapUtils.getObject(data, "relationships");
-        if (relationships == null || relationships.size() == 0) return true;
+        if (relationships == null || relationships.size() == 0) return ;
 
         List<ERelationship> relationshipList = new ArrayList<>();
 
@@ -109,7 +129,6 @@ public class GraphBuildService {
         }
         if (relationshipList.size() > 0)
             graphService.saveRelationshipList(relationshipList);
-        return false;
     }
 
 

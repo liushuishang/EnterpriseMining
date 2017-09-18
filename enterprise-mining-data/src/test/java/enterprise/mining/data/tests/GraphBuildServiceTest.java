@@ -41,5 +41,10 @@ public class GraphBuildServiceTest {
         buildService.createOneMap(_id,entityId);
     }
 
+    @Test
+    public void 全量构建(){
+        buildService.build();
+    }
+
 
 }
